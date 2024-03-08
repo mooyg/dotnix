@@ -15,25 +15,25 @@
 
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
+    flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = inputs@ { nixpkgs, home-manager, ... }:
+  outputs = inputs@ { nixpkgs, home-manager, flake-utils, ... }:
+
     let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgsForSystem = system: import nixpkgs
+        {
+          inherit system;
+        };
+      mkHomeConfiguration = args: home-manager.lib.homeManagerConfiguration rec {
+        modules = [ ./home.nix ];
+        extraSpecialArgs = { inherit inputs; };
+        pkgs = let inherit args; in if builtins.hasAttr "system" args then pkgsForSystem args.system else pkgsForSystem "x86_64-linux";
+      };
     in
     {
-      homeConfigurations."root" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+      homeConfigurations.root = mkHomeConfiguration { };
 
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
-        modules = [ ./home.nix ];
-
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
-        extraSpecialArgs = { inherit inputs; };
-      };
+      homeConfigurations.mooy = mkHomeConfiguration { system = "aarch64-darwin"; };
     };
 }

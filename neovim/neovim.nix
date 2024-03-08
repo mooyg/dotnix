@@ -5,8 +5,8 @@
   programs.nixvim.enable = true;
   programs.nixvim = {
     globals.mapleader = " ";
-    colorschemes.dracula.enable = true;
-    clipboard.register = "unnamed";
+    colorschemes.nord.enable = true;
+    clipboard.register = "unnamedplus";
 
     # Options
     options = {
@@ -33,7 +33,7 @@
       {
         mode = "n";
         key = "<leader>fe";
-        action = "<cmd>NvimTreeFocus<cr>";
+        action = "<cmd>Neotree<cr>";
       }
     ];
     # Plugins

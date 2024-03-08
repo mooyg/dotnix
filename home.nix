@@ -6,9 +6,6 @@
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "root";
-  home.homeDirectory = "/root";
-
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -75,5 +72,5 @@
     # EDITOR = "emacs";
   };
 
-  imports = [ ./zsh.nix ./starship.nix ./neovim/neovim.nix ./git.nix ];
+  imports = [ ./username.nix ./zsh.nix ./starship.nix ./neovim/neovim.nix ./git.nix ];
 }
