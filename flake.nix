@@ -4,6 +4,10 @@
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    darwin = {
+      url = "github:lnl7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -15,25 +19,26 @@
 
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = inputs@ { nixpkgs, home-manager, flake-utils, ... }:
-
+  outputs = inputs@ { nixpkgs, home-manager, darwin, ... }:
     let
       pkgsForSystem = system: import nixpkgs
         {
           inherit system;
         };
-      mkHomeConfiguration = args: home-manager.lib.homeManagerConfiguration rec {
-        modules = [ ./home.nix ];
+      mkHomeConfiguration = args: home-manager.lib.homeManagerConfiguration ({
         extraSpecialArgs = { inherit inputs; };
         pkgs = let inherit args; in if builtins.hasAttr "system" args then pkgsForSystem args.system else pkgsForSystem "x86_64-linux";
-      };
+      } // args);
     in
     {
-      homeConfigurations.root = mkHomeConfiguration { };
-
-      homeConfigurations.mooy = mkHomeConfiguration { system = "aarch64-darwin"; };
+      homeConfigurations.root = mkHomeConfiguration {
+        modules = [ ./home.nix ];
+      };
+      darwinConfigurations.idk-mac = darwin.lib.darwinSystem {
+        system = "x86_64-darwin";
+        modules = [ ./home.nix ];
+      };
     };
 }
