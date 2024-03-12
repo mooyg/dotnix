@@ -38,7 +38,12 @@
       };
       darwinConfigurations.idk-mac = darwin.lib.darwinSystem {
         system = "x86_64-darwin";
-        modules = [ ./home.nix ];
+        modules = [
+          home-manager.darwinModules.home-manager
+          {
+            home-manager.users.nix-test = ./home.nix;
+          }
+        ];
       };
     };
 }
