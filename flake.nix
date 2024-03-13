@@ -48,7 +48,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               users.mooy = import ./home.nix;
-              extraSpecialArgs = { inherit inputs; };
+              extraSpecialArgs = { inherit inputs username homeDirectory; };
             };
           }
         ];
