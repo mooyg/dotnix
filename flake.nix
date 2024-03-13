@@ -43,6 +43,8 @@
           home-manager.darwinModules.home-manager
           {
             home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
               users.mooy = import ./home.nix;
               extraSpecialArgs = { inherit inputs; };
             };
