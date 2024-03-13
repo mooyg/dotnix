@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+
+  imports = [ ./username.nix ./zsh.nix ./starship.nix ./neovim/neovim.nix ./git.nix ];
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
@@ -73,5 +75,4 @@
     # EDITOR = "emacs";
   };
 
-  imports = [ ./username.nix ./zsh.nix ./starship.nix ./neovim/neovim.nix ./git.nix ];
 }
