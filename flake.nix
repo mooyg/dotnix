@@ -47,7 +47,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.mooy = import ./home.nix;
+              users.test = import ./home.nix;
               extraSpecialArgs = { inherit inputs username homeDirectory; };
             };
           }

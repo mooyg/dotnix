@@ -1,7 +1,8 @@
 { pkgs
 , ...
 }: {
-
+  users.users.test.home = "/Users/test";
+  users.users.test.name = "test";
   services.nix-daemon.enable = true;
   environment = {
     shells = with pkgs; [ zsh ];
