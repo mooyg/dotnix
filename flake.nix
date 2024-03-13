@@ -23,12 +23,14 @@
 
   outputs = inputs@ { nixpkgs, home-manager, darwin, ... }:
     let
+      username = "root";
+      homeDirectory = "/root";
       pkgsForSystem = system: import nixpkgs
         {
           inherit system;
         };
       mkHomeConfiguration = args: home-manager.lib.homeManagerConfiguration ({
-        extraSpecialArgs = { inherit inputs; };
+        extraSpecialArgs = { inherit inputs username homeDirectory; };
         pkgs = let inherit args; in if builtins.hasAttr "system" args then pkgsForSystem args.system else pkgsForSystem "x86_64-linux";
       } // args);
     in

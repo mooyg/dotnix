@@ -9,6 +9,6 @@
   homebrew = {
     enable = true;
     global.brewfile = true;
-    casks = [ "raycast" ];
+    casks = [ "raycast" "warp" "arc" "aldente" "superlist" "scroll-reverser" "discord" "orbstack" "maccy" "clickup" ];
   };
 }

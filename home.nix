@@ -1,8 +1,8 @@
-{ pkgs, ... }:
-
+{ pkgs, specialArgs, ... }:
 {
-
-  imports = [ ./username.nix ./zsh.nix ./starship.nix ./neovim/neovim.nix ./git.nix ];
+  home.username = specialArgs.username;
+  home.homeDirectory = specialArgs.homeDirectory;
+  imports = [ ./zsh.nix ./starship.nix ./neovim/neovim.nix ./git.nix ];
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
