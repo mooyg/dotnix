@@ -36,7 +36,7 @@
       homeConfigurations.root = mkHomeConfiguration {
         modules = [ ./home.nix ];
       };
-      darwinConfigurations."idk-mac.local" = darwin.lib.darwinSystem {
+      darwinConfigurations."idk-mac" = darwin.lib.darwinSystem {
         system = "x86_64-darwin";
         modules = [
           ./darwin.nix
