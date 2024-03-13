@@ -2,6 +2,7 @@
 , ...
 }: {
 
+  services.nix-daemon.enable = true;
   environment = {
     shells = with pkgs; [ zsh ];
     loginShell = pkgs.zsh;
