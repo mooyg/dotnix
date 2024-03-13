@@ -42,8 +42,10 @@
           ./darwin.nix
           home-manager.darwinModules.home-manager
           {
-            home-manager.users.mooy.imports = [ ./home.nix ];
-            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager = {
+              users.mooy = import ./home.nix;
+              extraSpecialArgs = { inherit inputs; };
+            };
           }
         ];
       };
