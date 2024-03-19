@@ -23,8 +23,8 @@
 
   outputs = inputs@ { nixpkgs, home-manager, darwin, ... }:
     let
-      username = "root";
-      homeDirectory = "/root";
+      username = "mooy";
+      homeDirectory = "/Users/mooy";
       pkgsForSystem = system: import nixpkgs
         {
           inherit system;
@@ -46,8 +46,7 @@
           {
             home-manager = {
               useGlobalPkgs = true;
-              useUserPackages = true;
-              users.test = import ./home.nix;
+              users.mooy = import ./home.nix;
               extraSpecialArgs = { inherit inputs username homeDirectory; };
             };
           }

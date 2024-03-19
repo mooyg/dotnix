@@ -1,8 +1,8 @@
 { pkgs
 , ...
 }: {
-  users.users.test.home = "/Users/test";
-  users.users.test.name = "test";
+  users.users.mooy.home = "/Users/mooy";
+  users.users.mooy.name = "mooy";
   services.nix-daemon.enable = true;
   environment = {
     shells = with pkgs; [ zsh ];
@@ -11,6 +11,6 @@
   homebrew = {
     enable = true;
     global.brewfile = true;
-    casks = [ "raycast" "warp" "arc" "aldente" "superlist" "scroll-reverser" "discord" "orbstack" "maccy" "clickup" ];
+    casks = [ "raycast" "warp" "arc" "aldente" "superlist" "scroll-reverser" "discord" "orbstack" "maccy" "clickup" "betterdisplay" "iterm2" ];
   };
 }
