@@ -18,4 +18,20 @@
     name = "nvim_lsp";
   }];
   settings.snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
+  settings.extraConfigLua = "
+cmp.setup {
+  formatting = {
+    format = function(entry, vim_item)
+      vim_item.abbr = ' ' .. vim_item.abbr
+      vim_item.menu = (vim_item.menu or '') .. ' '
+      return vim_item
+    end
+  }
+
+window = {
+        documentation = cmp.config.window.bordered({
+            winhighlight = \"Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None\",
+        }),
+    },
+}";
 }

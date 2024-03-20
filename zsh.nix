@@ -17,4 +17,8 @@
     "rust"
     "direnv"
   ];
+
+  programs.zsh.initExtra = "
+    eval \"$(fnm env --use-on-cd)\"
+  ";
 }
