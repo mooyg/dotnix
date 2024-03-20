@@ -14,5 +14,11 @@
     casks = [ "raycast" "warp" "arc" "aldente" "superlist" "scroll-reverser" "discord" "orbstack" "maccy" "clickup" "betterdisplay" "iterm2" "keyboardcleantool" "visual-studio-code" "purevpn" ];
     brewPrefix = "/opt/homebrew/bin";
   };
-  }
+
+  fonts.fontDir.enable = true;
+  fonts.fonts = with pkgs; [
+    recursive
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+  ];
+}
 

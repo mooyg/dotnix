@@ -5,7 +5,7 @@
   programs.nixvim.enable = true;
   programs.nixvim = {
     globals.mapleader = " ";
-    colorschemes.nord.enable = true;
+    colorschemes.dracula.enable = true;
     clipboard.register = "unnamedplus";
 
     # Options

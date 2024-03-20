@@ -1,7 +1,7 @@
 { pkgs, specialArgs, ... }:
 {
   home.username = specialArgs.username;
-#  home.homeDirectory = specialArgs.homeDirectory;
+  #  home.homeDirectory = specialArgs.homeDirectory;
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
