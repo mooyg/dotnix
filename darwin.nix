@@ -20,5 +20,10 @@
     recursive
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
+  nix = {
+    settings = {
+      "extra-experimental-features" = [ "nix-command" "flakes" ];
+    };
+  };
 }
 

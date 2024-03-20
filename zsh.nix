@@ -15,5 +15,6 @@
     "npm"
     "yarn"
     "rust"
+    "direnv"
   ];
 }
