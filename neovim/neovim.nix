@@ -47,10 +47,12 @@
       neo-tree.enable = true;
       treesitter.enable = true;
       barbecue.enable = true;
+      vim-matchup = import ./plugins/vim-matchup.nix;
       conform-nvim = import ./plugins/conform.nix;
       cmp = import ./plugins/cmp.nix;
       harpoon = import ./plugins/harpoon.nix;
       lsp = import ./plugins/lsp.nix;
+      trouble = import ./plugins/trouble.nix;
     };
   };
 }
