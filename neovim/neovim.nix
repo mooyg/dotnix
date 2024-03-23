@@ -35,6 +35,11 @@
         key = "<leader>fe";
         action = "<cmd>Neotree<cr>";
       }
+      {
+        mode = "n";
+        key = "<leader>xx";
+        action = "<cmd>TroubleToggle<cr>";
+      }
     ];
     # Plugins
     plugins = {

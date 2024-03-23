@@ -1,4 +1,6 @@
 {
   enable = true;
-  treesitterIntegration = true;
+  treesitterIntegration = {
+    enable = true;
+  };
 }

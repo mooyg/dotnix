@@ -7,9 +7,10 @@
     javascript-react = [ [ "prettierd" "prettier" ] ];
     svelte = [ [ "prettierd" "prettier" ] ];
     nix = [ [ "nixpkgs-fmt" "nixpkgs-fmt" ] ];
+    css = [ "prettierd" ];
   };
   formatOnSave = {
     lspFallback = true;
-    timeoutMs = 500;
+    timeoutMs = 1500;
   };
 }
