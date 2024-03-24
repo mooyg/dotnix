@@ -6,9 +6,10 @@
     typescript-react = [ [ "prettierd" "prettier" ] ];
     javascript-react = [ [ "prettierd" "prettier" ] ];
     svelte = [ [ "prettierd" "prettier" ] ];
-    nix = [ [ "nixpkgs-fmt" "nixpkgs-fmt" ] ];
+    nix = [ [ "alejandra" "nil_ls" ] ];
     css = [ "prettierd" ];
-    pcss = ["prettierd"];
+    yaml = [ "yamlfmt" ];
+    "*" = [ [ "prettierd" ] ];
   };
   formatOnSave = {
     lspFallback = true;
