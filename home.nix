@@ -1,5 +1,8 @@
-{ pkgs, specialArgs, ... }:
 {
+  pkgs,
+  specialArgs,
+  ...
+}: {
   home.username = specialArgs.username;
   #  home.homeDirectory = specialArgs.homeDirectory;
   # Let Home Manager install and manage itself.
@@ -77,9 +80,9 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
-  home.sessionPath = [ "/run/current-system/sw/bin" ];
+  home.sessionPath = ["/run/current-system/sw/bin"];
   programs.zsh.shellAliases = {
     ls = "exa";
   };
-  imports = [ ./zsh.nix ./starship.nix ./neovim/neovim.nix ./git.nix ./direnv.nix ];
+  imports = [./zsh.nix ./starship.nix ./neovim/neovim.nix ./git.nix ./direnv.nix];
 }

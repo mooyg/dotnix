@@ -21,36 +21,47 @@
     };
   };
 
-  outputs = inputs@ { nixpkgs, home-manager, darwin, ... }:
-    let
-      username = "mooy";
-      homeDirectory = "/Users/mooy";
-      pkgsForSystem = system: import nixpkgs
-        {
-          inherit system;
-        };
-      mkHomeConfiguration = args: home-manager.lib.homeManagerConfiguration ({
-        extraSpecialArgs = { inherit inputs username homeDirectory; };
-        pkgs = let inherit args; in if builtins.hasAttr "system" args then pkgsForSystem args.system else pkgsForSystem "x86_64-linux";
-      } // args);
-    in
-    {
-      homeConfigurations.root = mkHomeConfiguration {
-        modules = [ ./home.nix ];
+  outputs = inputs @ {
+    nixpkgs,
+    home-manager,
+    darwin,
+    ...
+  }: let
+    username = "mooy";
+    homeDirectory = "/Users/mooy";
+    pkgsForSystem = system:
+      import nixpkgs
+      {
+        inherit system;
       };
-      darwinConfigurations."idk-mac" = darwin.lib.darwinSystem {
-        system = "x86_64-darwin";
-        modules = [
-          ./darwin.nix
-          home-manager.darwinModules.home-manager
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              users.mooy = import ./home.nix;
-              extraSpecialArgs = { inherit inputs username homeDirectory; };
-            };
-          }
-        ];
-      };
+    mkHomeConfiguration = args:
+      home-manager.lib.homeManagerConfiguration ({
+          extraSpecialArgs = {inherit inputs username homeDirectory;};
+          pkgs = let
+            inherit args;
+          in
+            if builtins.hasAttr "system" args
+            then pkgsForSystem args.system
+            else pkgsForSystem "x86_64-linux";
+        }
+        // args);
+  in {
+    homeConfigurations.root = mkHomeConfiguration {
+      modules = [./home.nix];
     };
+    darwinConfigurations."idk-mac" = darwin.lib.darwinSystem {
+      system = "x86_64-darwin";
+      modules = [
+        ./darwin.nix
+        home-manager.darwinModules.home-manager
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            users.mooy = import ./home.nix;
+            extraSpecialArgs = {inherit inputs username homeDirectory;};
+          };
+        }
+      ];
+    };
+  };
 }
