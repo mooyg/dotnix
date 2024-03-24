@@ -8,6 +8,7 @@
     svelte = [ [ "prettierd" "prettier" ] ];
     nix = [ [ "nixpkgs-fmt" "nixpkgs-fmt" ] ];
     css = [ "prettierd" ];
+    pcss = ["prettierd"];
   };
   formatOnSave = {
     lspFallback = true;
