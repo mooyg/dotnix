@@ -42,7 +42,7 @@
           in
             if builtins.hasAttr "system" args
             then pkgsForSystem args.system
-            else pkgsForSystem "x86_64-linux";
+            else pkgsForSystem "aarch64-darwin";
         }
         // args);
   in {
@@ -50,7 +50,7 @@
       modules = [./home.nix];
     };
     darwinConfigurations."idk-mac" = darwin.lib.darwinSystem {
-      system = "x86_64-darwin";
+      system = "aarch64-darwin";
       modules = [
         ./darwin.nix
         home-manager.darwinModules.home-manager
