@@ -32,6 +32,9 @@
     eza
     kubectl
     yamlfmt
+    zoxide
+    fzf
+    helm-ls
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
@@ -82,6 +85,7 @@
   home.sessionPath = ["/run/current-system/sw/bin"];
   programs.zsh.shellAliases = {
     ls = "exa";
+    cd = "z";
   };
   imports = [./zsh.nix ./starship.nix ./neovim/neovim.nix ./git.nix ./direnv.nix];
 }

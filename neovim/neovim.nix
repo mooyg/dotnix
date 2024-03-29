@@ -53,6 +53,7 @@
       treesitter.enable = true;
       barbecue.enable = true;
       presence-nvim.enable = true;
+      helm.enable = true;
       vim-matchup = import ./plugins/vim-matchup.nix;
       conform-nvim = import ./plugins/conform.nix;
       cmp = import ./plugins/cmp.nix;
@@ -60,5 +61,19 @@
       lsp = import ./plugins/lsp.nix;
       trouble = import ./plugins/trouble.nix;
     };
+    extraConfigLua = ''
+
+local lspconfig = require('lspconfig')
+
+lspconfig.helm_ls.setup {
+settings = {
+  ['helm-ls'] = {
+    yamlls = {
+      path = "yaml-language-server",
+    }
+  }
+}
+}
+    '';
   };
 }

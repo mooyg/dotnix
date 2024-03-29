@@ -15,9 +15,9 @@
     "yarn"
     "rust"
     "direnv"
+    "zoxide"
   ];
 
   programs.zsh.initExtra = "
-    eval \"$(fnm env --use-on-cd)\"
   ";
 }
