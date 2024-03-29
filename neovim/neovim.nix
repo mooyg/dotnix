@@ -53,7 +53,7 @@
       barbecue.enable = true;
       presence-nvim.enable = true;
       helm.enable = true;
-      neo-tree.enable = import ./plugins/neo-tree.nix;
+      neo-tree = import ./plugins/neo-tree.nix;
       vim-matchup = import ./plugins/vim-matchup.nix;
       conform-nvim = import ./plugins/conform.nix;
       cmp = import ./plugins/cmp.nix;

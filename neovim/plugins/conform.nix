@@ -3,8 +3,8 @@
   formattersByFt = {
     javascript = [["prettierd"]];
     typescript = [["prettierd"]];
-    typescript-react = [["prettierd"]];
-    javascript-react = [["prettierd"]];
+    typescriptreact = ["prettierd"];
+    javascriptreact = ["prettierd"];
     svelte = [["prettierd"]];
     nix = [["alejandra"]];
     css = ["prettierd"];

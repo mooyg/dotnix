@@ -1,5 +1,7 @@
 {
   enable = true;
-  hideDotfiles = false;
-  hideGitignored = true;
+  filesystem.filteredItems = {
+    hideDotfiles = false;
+    hideGitignored = false;
+  };
 }

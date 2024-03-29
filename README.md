@@ -1,3 +1,2 @@
 # Dotfiles
-
-Dotfiles managed by nix
+Dotfiles managed by nix.
