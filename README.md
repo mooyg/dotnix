@@ -1,2 +1,3 @@
 # Dotfiles
-WIP
+
+Dotfiles managed by nix

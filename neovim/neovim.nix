@@ -49,11 +49,11 @@
       autoclose.enable = true;
       comment-nvim.enable = true;
       ts-autotag.enable = true;
-      neo-tree.enable = true;
       treesitter.enable = true;
       barbecue.enable = true;
       presence-nvim.enable = true;
       helm.enable = true;
+      neo-tree.enable = import ./plugins/neo-tree.nix;
       vim-matchup = import ./plugins/vim-matchup.nix;
       conform-nvim = import ./plugins/conform.nix;
       cmp = import ./plugins/cmp.nix;
@@ -63,17 +63,17 @@
     };
     extraConfigLua = ''
 
-local lspconfig = require('lspconfig')
+      local lspconfig = require('lspconfig')
 
-lspconfig.helm_ls.setup {
-settings = {
-  ['helm-ls'] = {
-    yamlls = {
-      path = "yaml-language-server",
-    }
-  }
-}
-}
+      lspconfig.helm_ls.setup {
+      settings = {
+        ['helm-ls'] = {
+          yamlls = {
+            path = "yaml-language-server",
+          }
+        }
+      }
+      }
     '';
   };
 }
