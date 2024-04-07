@@ -9,6 +9,7 @@
     nix = [["alejandra"]];
     css = ["prettierd"];
     yaml = ["yamlfmt"];
+    rust = ["rustfmt"];
   };
   formatOnSave = {
     lspFallback = true;

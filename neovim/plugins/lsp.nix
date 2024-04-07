@@ -19,5 +19,6 @@
     jsonls.enable = true;
     nil_ls.enable = true;
     yamlls.enable = true;
+    rust-analyzer.enable = true;
   };
 }
