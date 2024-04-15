@@ -1,7 +1,12 @@
 {
   enable = true;
-  filesystem.filteredItems = {
-    hideDotfiles = false;
-    hideGitignored = false;
+  filesystem = {
+    filteredItems = {
+      hideDotfiles = false;
+      hideGitignored = false;
+    };
+  };
+  window = {
+    position = "right";
   };
 }

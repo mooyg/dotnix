@@ -5,7 +5,7 @@
   programs.nixvim.enable = true;
   programs.nixvim = {
     globals.mapleader = " ";
-    colorschemes.dracula.enable = true;
+    colorschemes.catppuccin.enable = true;
     clipboard.register = "unnamedplus";
 
     # Options
@@ -39,6 +39,11 @@
         mode = "n";
         key = "<leader>xx";
         action = "<cmd>TroubleToggle<cr>";
+      }
+      {
+        mode = "n";
+        key = "<leader>fc";
+        action = "<cmd>Neotree close<cr>";
       }
     ];
     # Plugins

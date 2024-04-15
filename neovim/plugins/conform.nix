@@ -10,6 +10,8 @@
     css = ["prettierd"];
     yaml = ["yamlfmt"];
     rust = ["rustfmt"];
+    vue = ["prettierd"];
+    go = ["gofmt"];
   };
   formatOnSave = {
     lspFallback = true;
