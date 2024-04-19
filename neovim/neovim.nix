@@ -56,7 +56,9 @@
       ts-autotag.enable = true;
       treesitter.enable = true;
       barbecue.enable = true;
-      presence-nvim.enable = true;
+      neocord = {
+        enable = true;
+      };
       neo-tree = import ./plugins/neo-tree.nix;
       vim-matchup = import ./plugins/vim-matchup.nix;
       conform-nvim = import ./plugins/conform.nix;

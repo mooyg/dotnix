@@ -23,5 +23,6 @@
     taplo.enable = true;
     volar.enable = true;
     gopls.enable = true;
+    marksman.enable = true;
   };
 }
