@@ -92,5 +92,5 @@
     cd = "z";
     k = "kubectl";
   };
-  imports = [./zsh.nix ./starship.nix ./neovim/neovim.nix ./git.nix ./direnv.nix];
+  imports = [./zsh.nix ./starship.nix ./neovim/neovim.nix ./git.nix ./direnv.nix ./tmux.nix ./alacritty/alacritty.nix];
 }
