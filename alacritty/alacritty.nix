@@ -23,7 +23,7 @@ in {
         family = "JetBrainsMono Nerd Font Mono";
         style = "Bold";
       };
-      size = 16;
+      size = 18;
     };
   };
 }

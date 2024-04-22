@@ -1,4 +1,8 @@
-{specialArgs, ...}: {
+{
+  specialArgs,
+  pkgs,
+  ...
+}: {
   imports = [
     specialArgs.inputs.nixvim.homeManagerModules.nixvim
   ];
@@ -56,9 +60,7 @@
       ts-autotag.enable = true;
       treesitter.enable = true;
       barbecue.enable = true;
-      neocord = {
-        enable = true;
-      };
+      neocord.enable = true;
       neo-tree = import ./plugins/neo-tree.nix;
       vim-matchup = import ./plugins/vim-matchup.nix;
       conform-nvim = import ./plugins/conform.nix;
@@ -68,6 +70,17 @@
       trouble = import ./plugins/trouble.nix;
     };
     extraConfigLua = ''
-    '';
+      local lspconfig = require("lspconfig")
+      lspconfig.gopls.setup({
+        settings = {
+          gopls = {
+            analyses = {
+              unusedparams = true,
+            },
+            staticcheck = true,
+            gofumpt = true,
+          },
+        },
+      })    '';
   };
 }
