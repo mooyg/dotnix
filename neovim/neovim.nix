@@ -1,8 +1,4 @@
-{
-  specialArgs,
-  pkgs,
-  ...
-}: {
+{specialArgs, ...}: {
   imports = [
     specialArgs.inputs.nixvim.homeManagerModules.nixvim
   ];
@@ -81,6 +77,7 @@
             gofumpt = true,
           },
         },
-      })    '';
+      })
+    '';
   };
 }
