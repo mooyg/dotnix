@@ -58,7 +58,7 @@
       barbecue.enable = true;
       neocord.enable = true;
       neo-tree = import ./plugins/neo-tree.nix;
-      vim-matchup = import ./plugins/vim-matchup.nix;
+      # vim-matchup = import ./plugins/vim-matchup.nix;
       conform-nvim = import ./plugins/conform.nix;
       cmp = import ./plugins/cmp.nix;
       harpoon = import ./plugins/harpoon.nix;
