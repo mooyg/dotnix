@@ -9,10 +9,11 @@
     clipboard.register = "unnamedplus";
 
     # Options
-    options = {
+    opts = {
       number = true;
       relativenumber = true;
     };
+
     # Keymaps;
     keymaps = [
       {
@@ -46,13 +47,14 @@
         action = "<cmd>Neotree close<cr>";
       }
     ];
+
     # Plugins
     plugins = {
       telescope.enable = true;
       noice.enable = true;
       luasnip.enable = true;
       autoclose.enable = true;
-      comment-nvim.enable = true;
+      comment.enable = true;
       ts-autotag.enable = true;
       treesitter.enable = true;
       barbecue.enable = true;
@@ -66,18 +68,6 @@
       trouble = import ./plugins/trouble.nix;
     };
     extraConfigLua = ''
-      local lspconfig = require("lspconfig")
-      lspconfig.gopls.setup({
-        settings = {
-          gopls = {
-            analyses = {
-              unusedparams = true,
-            },
-            staticcheck = true,
-            gofumpt = true,
-          },
-        },
-      })
     '';
   };
 }

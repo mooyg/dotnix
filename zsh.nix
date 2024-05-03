@@ -1,8 +1,8 @@
-{pkgs, ...}: {
+{...}: {
   programs.zsh.enable = true;
   programs.zsh.oh-my-zsh.enable = true;
   programs.zsh.enableCompletion = true;
-  programs.zsh.enableAutosuggestions = true;
+  programs.zsh.autosuggestion.enable = true;
   programs.zsh.sessionVariables = {
     ZSH = "$HOME/.oh-my-zsh";
     ZSH_THEME = "simple";

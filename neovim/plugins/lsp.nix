@@ -23,5 +23,9 @@
     taplo.enable = true;
     volar.enable = true;
     marksman.enable = true;
+    gopls = {
+      enable = true;
+      package = null;
+    };
   };
 }
