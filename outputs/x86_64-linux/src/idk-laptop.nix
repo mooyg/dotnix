@@ -9,7 +9,7 @@
   name = "idklaptop";
   modules = {
     # FIX: Removed host specific config for now.
-    nixos-modules = [../../../modules/nixos];
+    nixos-modules = [../../../modules/nixos ../../../hosts/${name}];
     home-modules = [../../../home/nixos];
   };
   systemArgs = modules // args;
