@@ -8,6 +8,5 @@ in {
     isNormalUser = true;
     extraGroups = ["networkmanager" "wheel" "users"];
   };
-  users.users.${myvars.username}.group = "mooy";
   users.groups.${myvars.username} = {};
 }
