@@ -4,5 +4,7 @@ in {
   users.users."${myvars.username}" = {
     home = "/home/${myvars.username}";
     name = "${myvars.username}";
+    isNormalUser = true;
+    extraGroups = ["networkmanager" "wheel"];
   };
 }
