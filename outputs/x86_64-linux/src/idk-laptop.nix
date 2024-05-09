@@ -8,7 +8,8 @@
 } @ args: let
   name = "idklaptop";
   modules = {
-    nixos-modules = [../../../modules/nixos ../../../hosts/${name}];
+    # FIX: Removed host specific config for now.
+    nixos-modules = [../../../modules/nixos];
     home-modules = [../../../home/nixos];
   };
   systemArgs = modules // args;
