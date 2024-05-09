@@ -2,7 +2,7 @@
   myvars = import ../../vars {inherit lib;};
 in {
   users.users."${myvars.username}" = {
-    home = "/Users/mooy";
+    home = "/home/${myvars.username}";
     name = "${myvars.username}";
   };
 }
