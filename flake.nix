@@ -1,17 +1,20 @@
 {
-  description = "Home Manager configuration of root";
+  description = "Nix config for multiple systems";
 
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
     darwin = {
       url = "github:lnl7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     nixvim = {
       url = "github:nix-community/nixvim";
       # If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
@@ -19,49 +22,10 @@
 
       inputs.nixpkgs.follows = "nixpkgs";
     };
-  };
-
-  outputs = inputs @ {
-    nixpkgs,
-    home-manager,
-    darwin,
-    ...
-  }: let
-    username = "mooy";
-    homeDirectory = "/Users/mooy";
-    pkgsForSystem = system:
-      import nixpkgs
-      {
-        inherit system;
-      };
-    mkHomeConfiguration = args:
-      home-manager.lib.homeManagerConfiguration ({
-          extraSpecialArgs = {inherit inputs username homeDirectory;};
-          pkgs = let
-            inherit args;
-          in
-            if builtins.hasAttr "system" args
-            then pkgsForSystem args.system
-            else pkgsForSystem "aarch64-darwin";
-        }
-        // args);
-  in {
-    homeConfigurations.root = mkHomeConfiguration {
-      modules = [./home.nix];
-    };
-    darwinConfigurations."idk-mac" = darwin.lib.darwinSystem {
-      system = "aarch64-darwin";
-      modules = [
-        ./darwin.nix
-        home-manager.darwinModules.home-manager
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            users.mooy = import ./home.nix;
-            extraSpecialArgs = {inherit inputs username homeDirectory;};
-          };
-        }
-      ];
+    haumea = {
+      url = "github:nix-community/haumea/v0.2.2";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
+  outputs = {...} @ args: import ./outputs args;
 }
