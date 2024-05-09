@@ -6,7 +6,7 @@
   };
   programs.zsh.shellAliases = {
     ls = "exa";
-    cd = "z";
     k = "kubectl";
+    cd = "z";
   };
 }

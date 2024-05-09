@@ -13,15 +13,9 @@ in
     modules =
       darwin-modules
       ++ [
-        ({lib, ...}: {
-          nixpkgs.pkgs = import nixpkgs {inherit system;};
-        })
-      ]
-      ++ [
         home-manager.darwinModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
           home-manager.extraSpecialArgs = {inherit inputs myvars;};
           home-manager.users."${myvars.username}".imports = home-modules;
         }

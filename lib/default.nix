@@ -1,3 +1,3 @@
 {...}: {
-  macosSystem = import ./darwinSystem.nix;
+  macosSystem = import ./macosSystem.nix;
 }

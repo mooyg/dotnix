@@ -1,6 +1,5 @@
 {...}: {
   imports = [
-    ./core/core.nix
     ../base/home.nix
     ../base/tmux.nix
     ../base/neovim/neovim.nix
@@ -11,5 +10,6 @@
     ../base/core/starship.nix
     ../base/core/zsh.nix
     ../base/alacritty/alacritty.nix
+    ./core/core.nix
   ];
 }
