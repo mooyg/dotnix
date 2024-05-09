@@ -17,7 +17,6 @@ in
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = {inherit inputs myvars;};
 
           home-manager.users."${myvars.username}".imports = home-modules;
         }
