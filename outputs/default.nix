@@ -19,7 +19,16 @@
         system = "aarch64-darwin";
       });
   };
+  nixosSystems = {
+    x86_64-linux = import ./x86_64-linux (args
+      // {
+        system = "x86_64-linux";
+      });
+  };
+
+  nixosSystemsValue = builtins.attrValues nixosSystems;
   darwinSystemsValue = builtins.attrValues darwinSystems;
 in {
   darwinConfigurations = lib.mergeAttrsList (map (it: it.darwinConfigurations or {}) darwinSystemsValue);
+  nixosConfigurations = lib.mergeAttrsList (map (it: it.nixosConfigurations or {}) nixosSystemsValue);
 }
