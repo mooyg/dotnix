@@ -5,7 +5,7 @@ in {
   users.users."${myvars.username}" = {
     home = "/home/${myvars.username}";
     name = "${myvars.username}";
-    isNormalUser = true;
+    isSystemUser = true;
     extraGroups = ["networkmanager" "wheel" "users"];
     hashedPassword = "$7$CU..../....EyeSvcoNhIJLQLcf329k7/$K0p5Oda/2bNLksyoZSpxp3pyvXrH4SKdt3LPhlNnBQ4";
   };
