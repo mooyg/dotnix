@@ -48,19 +48,18 @@
         "prompt" = "#cba6f7";
         "hl+" = "#f38ba8";
       };
-
-      zoxide = {
-        enable = true;
-        enableBashIntegration = true;
-        enableZshIntegration = true;
-        enableNushellIntegration = true;
-      };
-      atuin = {
-        enable = true;
-        enableBashIntegration = true;
-        enableZshIntegration = true;
-        enableNushellIntegration = true;
-      };
+    };
+    zoxide = {
+      enable = true;
+      enableBashIntegration = true;
+      enableZshIntegration = true;
+      enableNushellIntegration = true;
+    };
+    atuin = {
+      enable = true;
+      enableBashIntegration = true;
+      enableZshIntegration = true;
+      enableNushellIntegration = true;
     };
   };
 }

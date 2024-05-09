@@ -9,7 +9,8 @@
 } @ args: let
   name = "idk-mac";
   modules = {
-    darwin-modules = [../../../modules/darwin ../../../hosts/darwin-${name}];
+    # TODO: Removed host specific for now
+    darwin-modules = [../../../modules/darwin];
     home-modules = [../../../home/darwin-${name}/home.nix];
   };
   systemArgs = modules // args;
