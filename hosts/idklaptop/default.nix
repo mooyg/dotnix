@@ -2,7 +2,7 @@
 {...}: let
   hostname = "idklaptop";
 in {
-  imports = [/etc/nixos/hardware-configuration.nix];
+  imports = [./hardware.nix];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
