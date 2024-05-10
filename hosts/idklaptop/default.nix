@@ -2,7 +2,7 @@
 {...}: let
   hostname = "idklaptop";
 in {
-  imports = [./hardware.nix ./nvidia.nix];
+  imports = [./hardware.nix ./nvidia.nix ./docker.nix];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
