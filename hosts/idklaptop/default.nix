@@ -1,5 +1,5 @@
 # Laptop with NixOS
-{...}: let
+{pkgs, ...}: let
   hostname = "idklaptop";
 in {
   imports = [./hardware.nix ./nvidia.nix];
@@ -16,4 +16,6 @@ in {
 
   nixpkgs.config.allowUnfree = true;
   networking.hostName = hostname;
+
+  users.defaultUserShell = [pkgs.zsh];
 }
