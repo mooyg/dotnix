@@ -18,5 +18,5 @@ in {
     "${myvars.username}" = {};
   };
 
-  users.defaultUserShell = [pkgs.zsh];
+  users.users.mooy.shell = [pkgs.zsh];
 }
