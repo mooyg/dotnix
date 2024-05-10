@@ -11,7 +11,7 @@
     ripgrep
     fastfetch
     nmap
-    inetutils
+    iputils
     duf # Disk Usage/Free Utility - a better 'df' alternative
     gdu # disk usage analyzer(replacement of `du`)
     gping # ping, but with a graph(TUI)
