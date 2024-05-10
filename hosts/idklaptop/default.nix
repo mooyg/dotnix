@@ -2,9 +2,17 @@
 {...}: let
   hostname = "idklaptop";
 in {
-  networking.networkmanager.enable = true;
+  # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  imports = [./hardware.nix];
+
+  networking.networkmanager.enable = true;
+
+  services.xserver = {
+    layout = "us";
+    xkbVariant = "";
+  };
+
+  nixpkgs.config.allowUnfree = true;
   networking.hostName = hostname;
 }
