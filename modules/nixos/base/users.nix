@@ -1,4 +1,8 @@
-{lib, ...}: let
+{
+  lib,
+  pkgs,
+  ...
+}: let
   myvars = import ../../../vars {inherit lib;};
 in {
   users.mutableUsers = false;
@@ -13,4 +17,6 @@ in {
   users.groups = {
     "${myvars.username}" = {};
   };
+
+  users.defaultUserShell = [pkgs.zsh];
 }
