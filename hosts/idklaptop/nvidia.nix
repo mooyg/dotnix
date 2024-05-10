@@ -39,7 +39,7 @@
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
     package = config.boot.kernelPackages.nvidiaPackages.stable;
     prime = {
-      nvidiaBusId = "PCI:01:00:0";
+      nvidiaBusId = "0@:01:00:0";
       sync.enable = true;
     };
   };
