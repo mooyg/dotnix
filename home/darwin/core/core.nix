@@ -8,5 +8,6 @@
     argocd
     lazygit
     kubectx
+    inetutils
   ];
 }
