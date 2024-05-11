@@ -18,7 +18,6 @@
     svelte.enable = true;
     jsonls.enable = true;
     nil_ls.enable = true;
-    yamlls.enable = true;
     rust-analyzer.enable = true;
     taplo.enable = true;
     volar.enable = true;
