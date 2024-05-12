@@ -1,5 +1,5 @@
 {...}: {
-  fileSystems."/mnt/homepi/" = {
+  fileSystems."/mnt/homepi" = {
     device = "//100.71.18.118/homepi";
     fsType = "cifs";
     options = let
