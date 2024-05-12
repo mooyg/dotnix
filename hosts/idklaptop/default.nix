@@ -16,5 +16,5 @@ in {
 
   nixpkgs.config.allowUnfree = true;
   networking.hostName = hostname;
-  services.logind.extraConfig = "HandleLidSwitch=ignore";
+  services.logind.lidSwitch = "ignore";
 }
