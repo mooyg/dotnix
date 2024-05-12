@@ -1,6 +1,6 @@
 {...}: {
   fileSystems."/mnt/homepi" = {
-    device = "//100.71.18.118/homepi";
+    device = "//100.105.141.63/homepi";
     fsType = "cifs";
     options = let
       automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
