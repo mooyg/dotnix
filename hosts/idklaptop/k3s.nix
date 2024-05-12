@@ -5,7 +5,7 @@
   services.k3s = {
     enable = true;
     role = "agent";
-    serverAddr = "https://100.71.18.118:6443";
-    token = "K10eb17d11016e6fc6d1f1034af09c5b2456aafe6b23f28f38f0459ac17b7998c30::server:751bbc2f6e640d7fc6763e50ede6806a";
+    serverAddr = "https://100.83.190.44:6443";
+    token = "K10100f6c89aa242465d1222361cf24202aff6797076b04d3c9d64b0a06215bba1d::server:f8d9f7ea4ea679e60aa275247d9fe0e8";
   };
 }
