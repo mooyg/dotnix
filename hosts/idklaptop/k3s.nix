@@ -6,6 +6,6 @@
     enable = true;
     role = "agent";
     serverAddr = "https://100.105.141.63:6443";
-    token = "K10a8318d0694adc85dd727c664abb6c26de1d5bd04164de888ffc0c8b33fd1a44a::server:deb571416cd815e1099ac3f94e334776";
+    token = "K109a7f5a82d8d7fdeb5c17054e455f6ea6c39439ae3606fbc0c8000e0da60440f9::server:46fb36b7ad583300aea83c3e11b8371d";
   };
 }
