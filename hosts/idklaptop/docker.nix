@@ -2,6 +2,5 @@
   virtualisation.docker = {
     enableNvidia = true;
   };
-
-  systemd.enableUnifiedCgroupHierarchy = false;
+  virtualisation.containers.cdi.dynamic.nvidia.enable = true;
 }
