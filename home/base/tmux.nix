@@ -2,7 +2,7 @@
   programs.tmux = {
     enable = true;
     keyMode = "vi";
-    plugins = with pkgs.tmuxPlugins; [catppuccin better-mouse-mode];
+    plugins = with pkgs.tmuxPlugins; [dracula better-mouse-mode];
     prefix = "C-w";
     extraConfig = ''
                   set-option -ga terminal-overrides "alacritty:Tc"
