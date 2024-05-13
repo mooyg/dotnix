@@ -1,7 +1,9 @@
 {...}: {
-  virtualisation.oci-containers.backend = "docker";
   virtualisation.docker = {
+    enable = true;
+
+    # use nvidia as the default runtime
     enableNvidia = true;
+    extraOptions = "--default-runtime=nvidia";
   };
-  virtualisation.containers.cdi.dynamic.nvidia.enable = true;
 }
