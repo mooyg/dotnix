@@ -12,6 +12,7 @@
     rust = ["rustfmt"];
     vue = ["prettierd"];
     go = ["gofmt"];
+    astro = ["prettierd"];
   };
   formatOnSave = {
     lspFallback = true;
