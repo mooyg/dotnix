@@ -11,8 +11,17 @@
       K = "hover";
     };
   };
+  extraConfigLua = ''
+    local util = require 'lspconfig.util'
+
+    require('lspconfig').tsserver.setup{
+       root_dir = util.root_pattern('.git')(fname)
+    }
+  '';
   servers = {
-    tsserver.enable = true;
+    tsserver = {
+      enable = true;
+    };
     tailwindcss.enable = true;
     prismals.enable = true;
     svelte.enable = true;
