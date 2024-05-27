@@ -67,6 +67,11 @@
       trouble = import ./plugins/trouble.nix;
     };
     extraConfigLua = ''
+      local util = require 'lspconfig.util'
+
+      require('lspconfig').tsserver.setup{
+         root_dir = util.root_pattern('.git')(fname)
+      }
     '';
   };
 }
