@@ -67,11 +67,18 @@
       trouble = import ./plugins/trouble.nix;
     };
     extraConfigLua = ''
-      local util = require 'lspconfig.util'
+            local util = require 'lspconfig.util'
 
-      require('lspconfig').tsserver.setup{
-         root_dir = util.root_pattern('.git')(fname)
-      }
+            require('lspconfig').tsserver.setup{
+               root_dir = util.root_pattern('.git')(fname)
+            }
+      vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
+          group = vim.api.nvim_create_augroup('RestartPrettierd', { clear = true }),
+          pattern = '*prettier*',
+          callback = function()
+              vim.fn.system('prettierd restart')
+          end,
+      })
     '';
   };
 }
