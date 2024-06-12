@@ -5,7 +5,7 @@
     # EDITOR = "emacs";
   };
   programs.zsh.shellAliases = {
-    ls = "exa";
+    ls = "eza";
     k = "kubectl";
     cd = "z";
   };
