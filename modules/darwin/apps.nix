@@ -2,7 +2,7 @@
   homebrew = {
     enable = true;
     global.brewfile = true;
-    casks = ["raycast" "arc" "aldente" "superlist" "scroll-reverser" "discord" "orbstack" "maccy" "clickup" "betterdisplay" "keyboardcleantool" "visual-studio-code" "spotify" "gitkraken" "stats" "alacritty"];
+    casks = ["raycast" "arc" "aldente" "superlist" "scroll-reverser" "discord" "orbstack" "maccy" "clickup" "betterdisplay" "keyboardcleantool" "visual-studio-code" "spotify" "gitkraken" "stats" "alacritty" "sourcetree"];
     brewPrefix = "/opt/homebrew/bin";
   };
 
