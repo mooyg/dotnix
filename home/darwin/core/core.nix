@@ -8,5 +8,6 @@
     lazygit
     kubectx
     inetutils
+    kustomize
   ];
 }
