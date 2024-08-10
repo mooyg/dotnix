@@ -9,5 +9,6 @@
     kubectx
     inetutils
     kustomize
+    ktop
   ];
 }
