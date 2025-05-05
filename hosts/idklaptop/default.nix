@@ -10,9 +10,13 @@ in {
   networking.networkmanager.enable = true;
 
   services.xserver = {
+    enable = true;
     xkb.layout = "us";
+    displayManager.gdm.enable = true;  # Enable GDM display manager
+    desktopManager.gnome.enable = true;  # Enable GNOME
   };
 
   nixpkgs.config.allowUnfree = true;
   networking.hostName = hostname;
-}
+
+  }
