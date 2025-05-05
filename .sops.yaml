@@ -1,0 +1,7 @@
+keys:
+  - &mooy age142w6yc6ypr33dqscfzpystug2djaxyuu4kqyftavfvucj7djk9fse3l89e
+creation_rules:
+  - path_regex: secrets.yaml$
+    key_groups:
+      - age:
+          - *mooy
