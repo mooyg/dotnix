@@ -1,0 +1,9 @@
+{ inputs, ... }:
+{
+  imports = [ sops-nix.nixosModules.sops ];
+
+  sops.secrets.user_password = {
+    sopsFile = ../../../secrets/secrets.yaml;
+  };
+
+}
