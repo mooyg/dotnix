@@ -8,7 +8,6 @@
 in {
   sops.secrets.user_password = {
     sopsFile = ../../../secrets/secrets.yaml;
-    neededForUsers = true;
   };
 
   users.mutableUsers = false;
