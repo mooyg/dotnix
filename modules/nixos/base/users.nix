@@ -11,7 +11,6 @@ in {
     name = "${myvars.username}";
     isNormalUser = true;
     extraGroups = ["networkmanager" "wheel" "users"];
-    hashedPassword = "$7$CU..../....EyeSvcoNhIJLQLcf329k7/$K0p5Oda/2bNLksyoZSpxp3pyvXrH4SKdt3LPhlNnBQ4";
     group = "mooy";
     shell = pkgs.zsh;
     ignoreShellProgramCheck = true;

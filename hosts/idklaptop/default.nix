@@ -2,7 +2,7 @@
 {...}: let
   hostname = "idklaptop";
 in {
-  imports = [./hardware.nix ./nvidia.nix ./docker.nix ./samba.nix ./k3s.nix];
+  imports = [./nvidia.nix ./docker.nix];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -10,11 +10,9 @@ in {
   networking.networkmanager.enable = true;
 
   services.xserver = {
-    layout = "us";
-    xkbVariant = "";
+    xkb.layout = "us";
   };
 
   nixpkgs.config.allowUnfree = true;
   networking.hostName = hostname;
-  services.logind.lidSwitch = "ignore";
 }

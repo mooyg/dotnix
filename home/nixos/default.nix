@@ -7,6 +7,7 @@
     ../base/core/git.nix
     ../base/core/zsh.nix
     ../base/core/starship.nix
+    ../base/alacritty/alacritty.nix
     ./core/core.nix
   ];
 }
