@@ -1,8 +1,8 @@
 # Laptop with NixOS
-{...}: let
+{inputs, ...}: let
   hostname = "idklaptop";
 in {
-  imports = [./nvidia.nix ./docker.nix ./hardware.nix];
+  imports = [./nvidia.nix ./docker.nix ./hardware.nix inputs.sops-nix.nixOsModules.sops];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
