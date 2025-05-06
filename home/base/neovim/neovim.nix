@@ -56,7 +56,6 @@
       comment.enable = true;
       ts-autotag.enable = true;
       treesitter.enable = true;
-      neocord.enable = true;
       neo-tree = import ./plugins/neo-tree.nix;
       conform-nvim = import ./plugins/conform.nix;
       cmp = import ./plugins/cmp.nix;
