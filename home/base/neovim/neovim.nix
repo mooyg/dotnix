@@ -52,12 +52,10 @@
     plugins = {
       telescope.enable = true;
       noice.enable = true;
-      luasnip.enable = true;
       autoclose.enable = true;
       comment.enable = true;
       ts-autotag.enable = true;
       treesitter.enable = true;
-      barbecue.enable = true;
       neocord.enable = true;
       neo-tree = import ./plugins/neo-tree.nix;
       conform-nvim = import ./plugins/conform.nix;
