@@ -2,5 +2,5 @@
   system.stateVersion = "24.05";
 
   time.timeZone = "Asia/Kolkata";
-  imports = [./base/nix.nix ./base/packages.nix ./base/users.nix ./base/docker.nix];
+  imports = [./base/nix.nix ./base/packages.nix ./base/users.nix ./base/docker.nix ./base/sops.nix];
 }
