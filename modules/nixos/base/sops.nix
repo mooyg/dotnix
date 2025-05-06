@@ -1,5 +1,8 @@
 { specialArgs, ... }:
 {
+  programs.go = {
+    enable = true;
+  };
   imports = [ specialArgs.inputs.sops-nix.nixosModules.sops ];
   sops = {
     # TODO: dont hardcode this
