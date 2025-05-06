@@ -7,6 +7,7 @@
     age.keyFile = "/home/mooy/.config/sops/age/keys.txt";
     secrets.user_password = {
       sopsFile = ../../../secrets.yaml;
+      neededForUsers = true;
     };
   };
 }
