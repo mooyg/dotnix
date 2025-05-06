@@ -1,8 +1,8 @@
-{pkgs, inputs, ...}: {
+{pkgs, specialArgs, ...}: {
   home.packages = with pkgs; [
     iputils
     btop 
     discord
   ];
-  imports = [ inputs.sops-nix.nixosModules.sops ];
+  imports = [ specialArgs.inputs.sops-nix.nixosModules.sops ];
 }
