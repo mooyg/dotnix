@@ -1,20 +1,8 @@
 # Laptop with NixOS
-{ specialArgs, ... }:
-let
-  hostname = "idklaptop";
-in
-{
-
-  imports = [
-    ./nvidia.nix
-    ./docker.nix
-    ./hardware.nix
-    specialArgs.inputs.sops-nix.nixosModules.sops
-  ];
-
-  sops.secrets.user_password = {
-    sopsFile = ../../../secrets.yaml;
-  };
+{...}: let
+ hostname = "idklaptop";
+in {
+  imports = [./nvidia.nix ./docker.nix ./hardware.nix];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -24,11 +12,11 @@ in
   services.xserver = {
     enable = true;
     xkb.layout = "us";
-    displayManager.gdm.enable = true; # Enable GDM display manager
-    desktopManager.gnome.enable = true; # Enable GNOME
+    displayManager.gdm.enable = true;  # Enable GDM display manager
+    desktopManager.gnome.enable = true;  # Enable GNOME
   };
 
   nixpkgs.config.allowUnfree = true;
   networking.hostName = hostname;
 
-}
+  }
