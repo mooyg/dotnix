@@ -12,13 +12,13 @@
     };
   };
   servers = {
-    tsserver = {
+    ts_ls = {
       enable = true;
     };
     tailwindcss.enable = true;
     jsonls.enable = true;
     nil_ls.enable = true;
-    rust-analyzer.enable = true;
+    rust_analyzer = true;
     taplo.enable = true;
     gopls = {
       enable = true;

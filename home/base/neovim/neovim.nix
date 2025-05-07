@@ -77,7 +77,7 @@
     extraConfigLua = ''
             local util = require 'lspconfig.util'
 
-            require('lspconfig').tsserver.setup{
+            require('lspconfig').ts_ls.setup{
                root_dir = util.root_pattern('.git')(fname)
             }
       vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
