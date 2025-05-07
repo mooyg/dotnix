@@ -15,7 +15,7 @@
     astro = ["prettierd"];
   };
 
-  format_on_save = {
+  settings.format_on_save = {
     lsp_fallback = true;
     timeout_ms = 1500;
   };
