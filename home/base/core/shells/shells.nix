@@ -8,5 +8,6 @@
     ls = "eza";
     k = "kubectl";
     cd = "z";
+    lg = "lazygit";
   };
 }

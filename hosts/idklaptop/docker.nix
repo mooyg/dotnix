@@ -2,6 +2,6 @@
   virtualisation.docker = {
     enable = true;
 
-    extraOptions = "--default-runtime=nvidia";
+    # extraOptions = "--default-runtime=nvidia";
   };
 }

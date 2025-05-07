@@ -1,5 +1,4 @@
-{ specialArgs, ... }:
-{
+{specialArgs, ...}: {
   imports = [
     specialArgs.inputs.nixvim.homeManagerModules.nixvim
   ];

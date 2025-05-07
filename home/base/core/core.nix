@@ -15,6 +15,7 @@
     gdu # disk usage analyzer(replacement of `du`)
     gping # ping, but with a graph(TUI)
     doggo # DNS client for humans
+    lazygit # git tui
   ];
   programs = {
     eza = {

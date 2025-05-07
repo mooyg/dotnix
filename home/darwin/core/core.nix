@@ -5,7 +5,6 @@
     helm-ls
     istioctl
     argocd
-    lazygit
     kubectx
     inetutils
     kustomize

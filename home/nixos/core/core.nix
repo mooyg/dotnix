@@ -1,14 +1,9 @@
-{pkgs, specialArgs, ...}: {
-
-
-  programs.go = {
-    enable = true;
-  };
-
+{pkgs, ...}: {
   home.packages = with pkgs; [
     iputils
-    btop 
+    btop
     discord
     brave
+    spotify
   ];
 }
