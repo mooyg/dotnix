@@ -10,7 +10,7 @@ in {
   users.users."${myvars.username}" = {
     home = "/home/${myvars.username}";
     name = "${myvars.username}";
-    hashedPasswordFile = config.sops.secrets.user_password.path;
+    hashedPassword = "$6$vKZuDiKhsox3gpvr$fayOYJN46T7ML5xMCtsUmxR9KYvzgwDYwhFg8W6FZFEar3fcw/HxBK8BVi0BCSGbj7qqZRzzwKXxoJ2n/m3sN.";
     isNormalUser = true;
     extraGroups = ["networkmanager" "wheel" "users"];
     group = "mooy";
