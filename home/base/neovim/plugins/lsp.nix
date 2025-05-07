@@ -18,7 +18,7 @@
     tailwindcss.enable = true;
     jsonls.enable = true;
     nil_ls.enable = true;
-    rust_analyzer = true;
+    rust_analyzer.enable = true;
     taplo.enable = true;
     gopls = {
       enable = true;
