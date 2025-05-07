@@ -9,5 +9,6 @@
     iputils
     btop 
     discord
+    brave
   ];
 }
