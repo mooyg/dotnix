@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  imports = [./animations-def.nix ./waybar.nix];
+  imports = [./animations-def.nix ./waybar.nix ./binds.nix ./hypridle.nix];
   home.packages = with pkgs; [swappy];
   wayland.windowManager.hyprland = {
     enable = true;
