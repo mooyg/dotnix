@@ -1,5 +1,5 @@
 # Laptop with NixOS
-{pkgs, ...}: let
+{...}: let
   hostname = "idklaptop";
 in {
   imports = [./nvidia.nix ./docker.nix ./hardware.nix];
