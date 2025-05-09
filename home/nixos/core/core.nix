@@ -5,5 +5,6 @@
     discord
     brave
     spotify
+    kitty
   ];
 }

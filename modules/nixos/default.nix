@@ -3,6 +3,7 @@
 
   time.timeZone = "Asia/Kolkata";
   imports = [
+    ./base/hyprland.nix
     ./base/nix.nix
     ./base/packages.nix
     ./base/users.nix

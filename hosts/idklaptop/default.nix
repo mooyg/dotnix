@@ -1,6 +1,6 @@
 # Laptop with NixOS
-{...}: let
- hostname = "idklaptop";
+{pkgs, ...}: let
+  hostname = "idklaptop";
 in {
   imports = [./nvidia.nix ./docker.nix ./hardware.nix];
   # Bootloader.
@@ -12,11 +12,10 @@ in {
   services.xserver = {
     enable = true;
     xkb.layout = "us";
-    displayManager.gdm.enable = true;  # Enable GDM display manager
-    desktopManager.gnome.enable = true;  # Enable GNOME
+    displayManager.gdm.enable = true; # Enable GDM display manager
+    desktopManager.gnome.enable = true; # Enable GNOME
   };
 
   nixpkgs.config.allowUnfree = true;
   networking.hostName = hostname;
-
-  }
+}

@@ -14,16 +14,5 @@ in {
       columns = 0;
       lines = 0;
     };
-    font = {
-      bold = {
-        family = "JetBrainsMono Nerd Font Mono";
-        style = "Bold";
-      };
-      normal = {
-        family = "JetBrainsMono Nerd Font Mono";
-        style = "Bold";
-      };
-      size = 18;
-    };
   };
 }

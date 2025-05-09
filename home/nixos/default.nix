@@ -10,5 +10,7 @@
     ../base/core/starship.nix
     ../base/alacritty/alacritty.nix
     ./core/core.nix
+    ./core/stylix.nix
+    ./core/rofi.nix
   ];
 }
