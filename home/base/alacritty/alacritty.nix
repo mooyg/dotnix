@@ -1,4 +1,4 @@
-{lib,...}: let
+{lib, ...}: let
   themes = fetchGit {
     url = "https://github.com/alacritty/alacritty-theme";
     rev = "5f906a45b810458cbd387d648f50d4ef051f7d2j";
@@ -23,7 +23,7 @@ in {
         family = lib.mkForce "JetBrainsMono Nerd Font Mono";
         style = lib.mkForce "Bold";
       };
-      size = 18;
+      size = lib.mkForce 18;
     };
   };
 }

@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   programs.zsh.enable = true;
   programs.zsh.oh-my-zsh.enable = true;
   programs.zsh.enableCompletion = true;
@@ -16,6 +16,15 @@
     "rust"
     "direnv"
     "zoxide"
+  ];
+
+  programs.zsh.plugins = [
+    {
+      name = "vi-mode";
+      src = pkgs.zsh-vi-mode;
+
+      file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
+    }
   ];
 
   programs.zsh.initExtra = "

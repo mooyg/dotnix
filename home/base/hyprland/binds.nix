@@ -3,7 +3,7 @@
     "$mod" = "ALT";
     bind = [
       "$modifier,Return,exec,alacritty"
-      "$modifier,Space,exec,rofi"
+      "$modifier,Space,exec,rofi -show"
       "$modifier, h, movefocus, l"
       "$modifier, l, movefocus, r"
       "$modifier, j, movefocus, d"
@@ -23,6 +23,10 @@
       "ALT,Tab,cyclenext"
       "ALT,Tab,bringactivetotop"
       "$modifier,Q,killactive,"
+      "$modifier SHIFT, 1, movetoworkspace, 1"
+      "$modifier SHIFT, 2, movetoworkspace, 2"
+      "$modifier SHIFT, 3, movetoworkspace, 3"
+      "$modifier SHIFT, 4, movetoworkspace, 4"
     ];
 
     bindm = [

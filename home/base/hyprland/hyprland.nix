@@ -14,6 +14,18 @@
     };
     settings = {
       "$terminal" = "alacritty";
+      exec-once = [
+        "killall -q waybar;sleep .5 && waybar"
+      ];
+      input = {
+        repeat_delay = 300;
+
+        touchpad = {
+          natural_scroll = true;
+          disable_while_typing = true;
+          scroll_factor = 0.8;
+        };
+      };
     };
   };
 }

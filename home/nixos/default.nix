@@ -13,5 +13,6 @@
     ./core/core.nix
     ./core/stylix.nix
     ./core/rofi.nix
+    ../base/core/direnv.nix
   ];
 }
