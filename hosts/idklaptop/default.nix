@@ -2,10 +2,18 @@
 {...}: let
   hostname = "idklaptop";
 in {
-  imports = [./nvidia.nix ./docker.nix ./hardware.nix];
+  imports = [./nvidia.nix ./hardware.nix];
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.enable = false;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub = {
+    enable = true;
+    device = "nodev";
+    useOSProber = true;
+    efiSupport = true;
+    canTouchEfiVariables = true;
+    efiSysMountPoint = "/boot";
+  };
 
   networking.networkmanager.enable = true;
 
