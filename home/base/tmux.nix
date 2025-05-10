@@ -17,12 +17,19 @@
       better-mouse-mode
     ];
     prefix = "C-w";
+
     extraConfig = ''
       set-option -ga terminal-overrides "alacritty:Tc"
 
       set-option -g mouse on
 
       set -sg escape-time 5
+
+      # Vim-style pane navigation
+      bind h select-pane -L
+      bind j select-pane -D
+      bind k select-pane -U
+      bind l select-pane -R
     '';
   };
 }
