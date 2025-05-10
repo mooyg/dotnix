@@ -6,5 +6,6 @@
     brave
     spotify
     kitty
+    proton-pass
   ];
 }
