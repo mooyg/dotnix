@@ -11,7 +11,6 @@ in {
     device = "nodev";
     useOSProber = true;
     efiSupport = true;
-    efiSysMountPoint = "/boot";
   };
 
   networking.networkmanager.enable = true;
