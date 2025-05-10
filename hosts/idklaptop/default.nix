@@ -11,7 +11,6 @@ in {
     device = "nodev";
     useOSProber = true;
     efiSupport = true;
-    canTouchEfiVariables = true;
     efiSysMountPoint = "/boot";
   };
 
