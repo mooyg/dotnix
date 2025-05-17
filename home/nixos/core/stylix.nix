@@ -24,11 +24,11 @@
       };
       sansSerif = {
         package = pkgs.montserrat;
-        name = "Montserrat";
+        name = "JetBrains Mono";
       };
       serif = {
         package = pkgs.montserrat;
-        name = "Montserrat";
+        name = "JetBrains Mono";
       };
       sizes = {
         applications = 12;
