@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   imports = [./animations-def.nix ./waybar.nix ./binds.nix ./hypridle.nix];
-  home.packages = with pkgs; [swappy];
+  home.packages = with pkgs; [swappy swaynotificationcenter wlogout libnotify pavucontrol];
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;
